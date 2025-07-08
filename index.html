@@ -10,30 +10,63 @@
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: #1b2a34;
-      text-align: center;
     }
     header {
       background-color: #f4f0e6;
+      padding: 1rem 2rem;
       display: flex;
       align-items: center;
-      padding: 1rem 2rem;
+      flex-direction: column;
+      text-align: center;
     }
-    header img {
+    .header-top-img {
+      width: 100%;
+      max-height: 200px;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+    .header-logo-text {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      width: 100%;
+    }
+    .header-logo-text img {
       width: 130px;
     }
-    header h1 {
+    .header-logo-text h1 {
       font-family: 'Playfair Display', serif;
       font-size: 2.5rem;
-      margin: 0 auto;
       color: #b03060;
+      margin: 0;
+      text-align: left;
     }
     section {
-      padding: 2rem 2rem;
+      padding: 2rem;
       max-width: 1200px;
       margin: auto;
+      text-align: center;
     }
     .hero {
-      background-color: #f9e79f;
+      position: relative;
+      height: 400px;
+      overflow: hidden;
+      color: white;
+    }
+    .hero video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      padding-top: 6rem;
     }
     .services, .portfolio, .about, .testimonials, .contact {
       background-color: #fff;
@@ -79,13 +112,11 @@
       text-decoration: none;
     }
     @media (max-width: 768px) {
-      header {
+      .header-logo-text {
         flex-direction: column;
-        align-items: center;
-        text-align: center;
       }
-      header h1 {
-        margin-top: 1rem;
+      .header-logo-text h1 {
+        text-align: center;
       }
       .service-box {
         width: 80%;
@@ -95,14 +126,23 @@
 </head>
 <body>
   <header>
-    <img src="saucyjack-logo.png" alt="Saucy Jack Productions Logo" />
-    <h1>Set Sail on Your Story</h1>
+    <img class="header-top-img" src="header-image.jpg" alt="Top Header Image" />
+    <div class="header-logo-text">
+      <img src="saucyjack-logo.png" alt="Saucy Jack Productions Logo" />
+      <h1>Set Sail on Your Story</h1>
+    </div>
   </header>
 
   <section class="hero">
-    <h2>High-End Media Solutions for the Lowcountry</h2>
-    <p>Professional video, drone, photography, and social campaigns based in Hilton Head & Beaufort County.</p>
-    <a href="#contact" class="cta-button">Book Now</a>
+    <video autoplay muted loop>
+      <source src="your-video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-content">
+      <h2>High-End Media Solutions for the Lowcountry</h2>
+      <p>Professional video, drone, photography, and social campaigns based in Hilton Head & Beaufort County.</p>
+      <a href="#contact" class="cta-button">Book Now</a>
+    </div>
   </section>
 
   <section class="services">
