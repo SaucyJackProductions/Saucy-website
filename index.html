@@ -15,13 +15,15 @@
       padding: 3rem 2rem;
       display: flex;
       align-items: center;
-      flex-direction: column;
+      justify-content: space-between;
+      flex-wrap: wrap;
       text-align: center;
     }
           border-radius: 8px;
     }
     .header-logo-text img {
-      width: 130px;
+      width: 97.5px;
+      align-self: flex-start;
     }
     .header-logo-text h1 {
       font-family: 'Playfair Display', serif;
@@ -113,10 +115,9 @@
   </style>
 </head>
 <body>
-  <header>
-    <div class="header-logo-text">
-      <img src="saucyjack-logo.png" alt="Saucy Jack Productions Logo" />
-      <h1>Set Sail on Your Story</h1>
+  <<div class="header-logo-text" style="display: flex; align-items: center; justify-content: flex-end; width: 100%;">
+      <img src="saucyjack-logo.png" alt="Saucy Jack Productions Logo" style="margin-left: auto;" />
+      <h1 style="flex: 1; text-align: center; margin: 0; font-family: 'Playfair Display', serif; font-size: 2.5rem; color: #b03060;">Set Sail on Your Story</h1>
     </div>
   </header>
 
