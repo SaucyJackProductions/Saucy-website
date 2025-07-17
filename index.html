@@ -148,6 +148,42 @@
       0% { opacity: 0; transform: translateY(20px); }
       100% { opacity: 1; transform: translateY(0); }
     }
+      .video-carousel {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    .carousel-video {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      animation: fadeInVideo 30s infinite;
+    }
+
+    .carousel-video:nth-child(1) {
+      animation-delay: 0s;
+    }
+    .carousel-video:nth-child(2) {
+      animation-delay: 10s;
+    }
+    .carousel-video:nth-child(3) {
+      animation-delay: 20s;
+    }
+
+    @keyframes fadeInVideo {
+      0% { opacity: 0; }
+      8% { opacity: 1; }
+      30% { opacity: 1; }
+      38% { opacity: 0; }
+      100% { opacity: 0; }
+    }
   </style>
 </head>
 <body>
@@ -157,16 +193,23 @@
   </header>
 
   <section class="hero">
-    <video autoplay muted loop>
-      <source src="your-video.mp4" type="video/mp4">
-      Your browser does not support the video tag.
+  <div class="video-carousel">
+    <video class="carousel-video" autoplay muted loop>
+      <source src="video1.mp4" type="video/mp4">
     </video>
-    <div class="hero-content">
-      <h2>High-End Media Solutions for the Lowcountry</h2>
-      <p>Professional video, drone, photography, and social campaigns based in Hilton Head & Beaufort County.</p>
-      <a href="#contact" class="cta-button">Book Now</a>
-    </div>
-  </section>
+    <video class="carousel-video" muted loop>
+      <source src="video2.mp4" type="video/mp4">
+    </video>
+    <video class="carousel-video" muted loop>
+      <source src="video3.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="hero-content">
+    <h2>High-End Media Solutions for the Lowcountry</h2>
+    <p>Professional video, drone, photography, and social campaigns based in Hilton Head & Beaufort County.</p>
+    <a href="#contact" class="cta-button">Book Now</a>
+  </div>
+</section>
 
   <section class="services">
     <h2>Our Services</h2>
