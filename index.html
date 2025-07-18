@@ -39,10 +39,7 @@
       text-align: center;
     }
     .hero {
-      position: relative;
-      height: 400px;
-      overflow: hidden;
-      color: white;
+      margin-top: 72px;$1
     }
     .hero video {
       position: absolute;
@@ -164,21 +161,26 @@
       height: 100%;
       object-fit: cover;
       opacity: 0;
-      animation: fadeInVideo 30s infinite;
+      animation: fadeInVideo 9s infinite;
     }
 
     .carousel-video:nth-child(1) {
       animation-delay: 0s;
     }
     .carousel-video:nth-child(2) {
-      animation-delay: 10s;
+      animation-delay: 3s;
     }
     .carousel-video:nth-child(3) {
-      animation-delay: 20s;
+      animation-delay: 6s;
     }
 
     @keyframes fadeInVideo {
-      0% { opacity: 0; }
+  0% { opacity: 0; }
+  5% { opacity: 1; }
+  30% { opacity: 1; }
+  35% { opacity: 0; }
+  100% { opacity: 0; }
+}
       8% { opacity: 1; }
       30% { opacity: 1; }
       38% { opacity: 0; }
